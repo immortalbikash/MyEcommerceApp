@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (UserPhoneKey != "" && UserPasswordKey != "") {
             if (!TextUtils.isEmpty(UserPhoneKey) && !TextUtils.isEmpty(UserPasswordKey)) {
+
                 AllowAccess(UserPhoneKey, UserPasswordKey);
 
                 pd.setTitle("Already Logged in");
@@ -82,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child("Users").child(phone).exists()) {
                     Users usersData = dataSnapshot.child("Users").child(phone).getValue(Users.class);
-
                     if (usersData.getPhone().equals(phone)) {
                         if (usersData.getPassword().equals(password)) {
                             pd.dismiss();
