@@ -159,6 +159,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+                pd.dismiss();
+                String error = databaseError.getDetails();
+                Toast.makeText(LoginActivity.this, "" + error, Toast.LENGTH_SHORT).show();
 
             }
         });
