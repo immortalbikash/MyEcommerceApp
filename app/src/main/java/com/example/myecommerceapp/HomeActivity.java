@@ -18,7 +18,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //8 completed. . .
 
         LogoutBtn = findViewById(R.id.logout_btn);
 
@@ -30,5 +29,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //13 copleted
     }
 }
